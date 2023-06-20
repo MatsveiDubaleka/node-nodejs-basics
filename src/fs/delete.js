@@ -1,4 +1,5 @@
 import fs from 'fs';
+import getFilename from '../helpers/getFilename.js'
 
 const remove = async () => {
     const path = getFilename('./files/fileToRemove.txt', import.meta.url);

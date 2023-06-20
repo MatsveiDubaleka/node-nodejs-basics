@@ -1,4 +1,5 @@
 import fs from 'fs';
+import getFilename from '../helpers/getFilename.js'
 
 const rename = async () => {
     const oldName = 'wrongFilename.txt';

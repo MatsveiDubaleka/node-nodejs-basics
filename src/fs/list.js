@@ -1,4 +1,5 @@
 import fs from 'fs';
+import getFilename from '../helpers/getFilename.js'
 
 const list = async () => {
     const folderPath = getFilename('./files', import.meta.url);

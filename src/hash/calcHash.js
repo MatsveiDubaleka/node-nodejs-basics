@@ -7,6 +7,7 @@ const calculateHash = async () => {
     fs.readFile(path, (err, data) => {
         const hash = createHash('sha256').update(data).digest('hex')
         fs.writeFile(path, hash, (err) => {
+            console.log(hash);
             if(err) console.log(err);
         });
     })
