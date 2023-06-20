@@ -1,5 +1,16 @@
+import fs from 'fs';
+import getFilename from '../helpers/getFilename.js'
+
 const remove = async () => {
-    // Write your code here 
+    const path = getFilename('./files/fileToRemove.txt', import.meta.url);
+    fs.readFile(path, (err, data) => {
+        if(err) throw Error('FS operation failed')
+    })
+
+    fs.unlink(path, (err) => {
+        if(err) throw Error('FS operation failed')
+        console.log('File was successfully removed!')
+    })
 };
 
 await remove();
